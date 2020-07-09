@@ -1,8 +1,5 @@
-##Su tarea es escribir un par de funciones que almacenan en 
-## caché el inverso de una matriz
 
-##Creamos una funcion que llama a la función inversa de una matriz
-## y guarda en cache
+##This function creates a special matrix object that can cache its inverse.
 
 makeCacheMatrix <- function(x  =  matrix ()) {
   r <- NULL
@@ -18,7 +15,10 @@ makeCacheMatrix <- function(x  =  matrix ()) {
        getresol = getresol)
 }
 
-##La funcion busca la inversa de una matriz 
+##cacheSolve retrieves the inverse of the cache. 
+##If the inverse has already been calculated 
+## and the matrix has not changed.
+
 cacheSolve <- function(x, ...) {
   r <- x$getresol()
   if(!is.null(r)) {
